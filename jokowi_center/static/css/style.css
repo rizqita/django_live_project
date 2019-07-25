@@ -1,3 +1,4 @@
+/* Base.html */
 .menu li{
     display: table-cell;
     padding-right: 30px;
@@ -10,8 +11,6 @@
 .menu {
   background-color: red;
 }
-
-
 .image-footer img{
   width=75%;
 }
@@ -27,4 +26,11 @@
 }
 .image-header{
   align-items: center;
+}
+/* Hubungankami.html */
+span{
+  color: red
+}
+.Judul-blok {
+  background-color:black;
 }
