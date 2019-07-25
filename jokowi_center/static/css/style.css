@@ -11,6 +11,14 @@
 .menu {
   background-color: red;
 }
+<<<<<<< HEAD
+=======
+p.judul-blog{
+  width:356px;
+  word-wrap: break-word;
+}
+
+>>>>>>> 2800f3406266d6710ec34501936b8f22c99c8c17
 .image-footer img{
   width=75%;
 }
@@ -20,6 +28,9 @@
 .row2{
   background-color: black;
 }
+.row-text-social-media{
+  text-align:center;
+}
 .text-footer{
   text-align: center;
   color: white;
@@ -27,6 +38,7 @@
 .image-header{
   align-items: center;
 }
+<<<<<<< HEAD
 /* Hubungankami.html */
 span{
   color: red
@@ -34,3 +46,16 @@ span{
 .Judul-blok {
   background-color:black;
 }
+=======
+.aligncenter{
+  text-align: center;
+}
+h3{
+  padding-top: 25px;
+    padding-left: 100px;
+    font-size: 23px;
+    text-align: center;
+    font-family: 'Muli', sans-serif;
+    color: #19345E;
+}
+>>>>>>> 2800f3406266d6710ec34501936b8f22c99c8c17
