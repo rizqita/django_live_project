@@ -28,13 +28,14 @@
   text-align:center;
 }
 .text-footer{
-  text-align: center;
   color: white;
+}
+.text-footer a{
+  color: red
 }
 .image-header{
   align-items: center;
 }
-
 /* Hubungikami.html */
 span{
   color: red
@@ -43,16 +44,16 @@ span{
   background-color:black;
 }
 /* social media.html */
-.aligncenter{
+/* .aligncenter{
   text-align: center;
-}
+} */
 h3{
-  padding-top: 25px;
-    padding-left: 100px;
-    font-size: 23px;
-    text-align: center;
-    font-family: 'Muli', sans-serif;
-    color: #19345E;
+  /* padding-top: 25px;
+  padding-left: 100px;
+  font-size: 23px;
+  text-align: center; */
+  font-family: 'Muli', sans-serif;
+  color: #19345E;
 
 /* index.html */
 p.judul-blog{

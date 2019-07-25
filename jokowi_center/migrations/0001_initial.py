@@ -29,3 +29,4 @@ class Migration(migrations.Migration):
                 ('isi_pesan', models.TextField()),
             ],
         ),
+    ]
