@@ -18,6 +18,10 @@ p.judul-blog{
 .image-footer img{
   width=75%;
 }
+.header-size img{
+ width: 580px;
+ height:75%;
+}
 .row1{
   background-color: black;
 }
