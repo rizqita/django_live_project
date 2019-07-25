@@ -1,0 +1,47 @@
+.menu li{
+    display: table-cell;
+    padding-right: 30px;
+    vertical-align: middle;
+    padding-top: 20px;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Muli', sans-serif;
+}
+.menu {
+  background-color: red;
+}
+p.judul-blog{
+  width:356px;
+  word-wrap: break-word;
+}
+
+.image-footer img{
+  width=75%;
+}
+.row1{
+  background-color: black;
+}
+.row2{
+  background-color: black;
+}
+.row-text-social-media{
+  text-align:center;
+}
+.text-footer{
+  text-align: center;
+  color: white;
+}
+.image-header{
+  align-items: center;
+}
+.aligncenter{
+  text-align: center;
+}
+h3{
+  padding-top: 25px;
+    padding-left: 100px;
+    font-size: 23px;
+    text-align: center;
+    font-family: 'Muli', sans-serif;
+    color: #19345E;
+}
