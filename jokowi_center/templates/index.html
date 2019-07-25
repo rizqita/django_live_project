@@ -1,4 +1,39 @@
 {%extends 'base/base.html'%}
 {%block content%}
-asdf
+<div class="container">
+  <div class="row">
+    <!-- image selamat datang di thejokowicenter -->
+    <!-- 1068x580 -->
+    </div>
+  <div class="row">
+    {% for item in blog %}
+    <div class=col-4">
+      <!-- berita satu -->
+      <img width="356" height="220" src="{{item.gambar}}" />
+      <br />
+      <p class="judul-blog">
+      {{item.judul}}
+
+    </div>
+    {% endfor %}
+  </div>
+  <div class="row">
+    <div class="col-8">
+      <div class="row">
+        <!-- berita utama -->
+        </div>
+      <div class="row">
+        <!-- berita utama kedua -->
+        </div>
+
+    </div>
+    <div class="col-4">
+      <!-- anggap ini sidebar -->
+      </div>
+  </div>
+  <div class="row">
+    <!-- untuk channel youtube -->
+  </div>
+
+</div>
 {%endblock%}
