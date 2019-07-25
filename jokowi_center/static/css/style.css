@@ -1,0 +1,36 @@
+/* Base.html */
+.menu li{
+    display: table-cell;
+    padding-right: 30px;
+    vertical-align: middle;
+    padding-top: 20px;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Muli', sans-serif;
+}
+.menu {
+  background-color: red;
+}
+.image-footer img{
+  width=75%;
+}
+.row1{
+  background-color: black;
+}
+.row2{
+  background-color: black;
+}
+.text-footer{
+  text-align: center;
+  color: white;
+}
+.image-header{
+  align-items: center;
+}
+/* Hubungankami.html */
+span{
+  color: red
+}
+.Judul-blok {
+  background-color:black;
+}
