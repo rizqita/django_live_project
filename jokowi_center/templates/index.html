@@ -6,7 +6,7 @@
     <!-- 1068x580 -->
     </div>
   <div class="row">
-    {% for item in blog %}
+    {% for item in blog|slice:":3"%}
     <div class=col-4">
       <!-- berita satu -->
       <img width="356" height="220" src="{{item.gambar}}" />
@@ -18,13 +18,19 @@
     {% endfor %}
   </div>
   <div class="row">
-    <div class="col-8">
+    <div class="col-9">
+      <h4 text-align="left">Berita Utama</h4>
       <div class="row">
-        <!-- berita utama -->
+      {% for item in blog|slice:"3:"%}
+        <div class="main-news">
+          <img height="75%" width="75%"src="{{item.gambar}}" />
+          <br />
+          <h5>{{item.judul}}</h5>
+          <p class="read-more"> {{item.isi|safe|truncatewords:"30"|linebreaks}}</p>
+           <a href="#">Selengkapnya...</a>
+          </div>
         </div>
-      <div class="row">
-        <!-- berita utama kedua -->
-        </div>
+      {% endfor %}
 
     </div>
     <div class="col-4">
