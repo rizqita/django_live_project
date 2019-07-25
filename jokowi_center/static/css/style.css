@@ -14,6 +14,10 @@
 .image-footer img{
   width=75%;
 }
+.header-size img{
+ width: 580px;
+ height:75%;
+}
 .row1{
   background-color: black;
 }
@@ -30,6 +34,7 @@
 .image-header{
   align-items: center;
 }
+
 /* Hubungikami.html */
 span{
   color: red
@@ -48,7 +53,6 @@ h3{
     text-align: center;
     font-family: 'Muli', sans-serif;
     color: #19345E;
-}
 
 /* index.html */
 p.judul-blog{

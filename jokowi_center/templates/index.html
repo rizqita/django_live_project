@@ -1,12 +1,43 @@
 {%extends 'base/base.html'%}
 {%block content%}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- START OF CAROUSEL -->
+<div class="container">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="height:580px;width:1068px;">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="/static/img/1.png" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="/static/img/1.png" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="/static/img/1.png" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+<br />
+<!-- END OF CAROUSEL -->
 <div class="container">
   <div class="row">
-    <!-- image selamat datang di thejokowicenter -->
-    <!-- 1068x580 -->
-    </div>
-  <div class="row">
-    {% for item in blog %}
+    {% for item in blog|slice:":3"%}
     <div class=col-4">
       <!-- berita satu -->
       <img width="356" height="220" src="{{item.gambar}}" />
@@ -18,21 +49,38 @@
     {% endfor %}
   </div>
   <div class="row">
-    <div class="col-8">
+    <div class="col-9">
+      <h4 text-align="left">Berita Utama</h4>
       <div class="row">
-        <!-- berita utama -->
+      {% for item in blog|slice:"3:4"%}
+        <div class="main-news">
+          <img height="50%" width="50%"src="{{item.gambar}}" />
+          <br />
+          <h5>{{item.judul}}</h5>
+          <p class="read-more"> {{item.isi|safe|truncatewords:"30"|linebreaks}}</p>
+           <a href="#">Selengkapnya...</a>
+          </div>
         </div>
-      <div class="row">
-        <!-- berita utama kedua -->
-        </div>
+      {% endfor %}
 
     </div>
+
+
     <div class="col-4">
       <!-- anggap ini sidebar -->
       </div>
   </div>
   <div class="row">
     <!-- untuk channel youtube -->
+    <div class="container">
+    <div class="col-12">
+      <div class="row">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL5Rb3KzLrXztoCKUvx6ASvjkpaPVo5etx"
+    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+</div>
+</div>
+>>>>>>> 1ae4dbaa872f83fa970d69c6e9ec8d0572159dce
   </div>
 
 </div>

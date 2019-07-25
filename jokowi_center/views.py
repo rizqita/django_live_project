@@ -15,7 +15,7 @@ def listmasukan(request):
     else:
         form = Inputfeedback()
     return render(request, 'Hubungikami.html',{'form':form})
-
+    
 def jkw_center_main(request):
     blog = Blog.objects.all()
     return render(request,'index.html',{'blog':blog})
