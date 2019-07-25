@@ -11,14 +11,10 @@
 .menu {
   background-color: red;
 }
-<<<<<<< HEAD
-=======
 p.judul-blog{
   width:356px;
   word-wrap: break-word;
 }
-
->>>>>>> 2800f3406266d6710ec34501936b8f22c99c8c17
 .image-footer img{
   width=75%;
 }
@@ -57,5 +53,4 @@ h3{
     text-align: center;
     font-family: 'Muli', sans-serif;
     color: #19345E;
-}
->>>>>>> 2800f3406266d6710ec34501936b8f22c99c8c17
+ 
