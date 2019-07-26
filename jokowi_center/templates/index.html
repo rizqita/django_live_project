@@ -1,39 +1,100 @@
 {%extends 'base/base.html'%}
 {%block content%}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- START OF CAROUSEL -->
 <div class="container">
-  <div class="row">
-    <!-- image selamat datang di thejokowicenter -->
-    <!-- 1068x580 -->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="height:580px;width:1068px;">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="https://cdn2.tstatic.net/medan/foto/bank/images/pernikahan-putri-presiden-jokowi-kahiyang-ayu-dan-bobby-nasution_20171109_200101.jpg" alt="First slide">
     </div>
-  <div class="row">
-    {% for item in blog %}
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://upload.wikimedia.org/wikipedia/id/thumb/1/1b/Kabinet_Kerja_Jokowi-JK_2014.jpg/800px-Kabinet_Kerja_Jokowi-JK_2014.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://akcdn.detik.net.id/community/media/visual/2018/09/11/3a81c604-2522-4f01-ac45-7f83b8389848_169.jpeg?w=780&q=90" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+<br />
+<!-- END OF CAROUSEL -->
+<h3 align="center">Berita Terbaru</h3>
+<div class="container">
+  <div class="row m-1 border justify-content-center ">
+    {% for item in blog|slice:":3"%}
     <div class=col-4">
       <!-- berita satu -->
       <img width="356" height="220" src="{{item.gambar}}" />
       <br />
-      <p class="judul-blog">
-      {{item.judul}}
+      <p class="judul-blog text-center">
+        <a href="{% url 'blog_detail' item.id %}" >{{item.judul}}</a>
+      </p>
 
     </div>
     {% endfor %}
   </div>
-  <div class="row">
-    <div class="col-8">
-      <div class="row">
-        <!-- berita utama -->
-        </div>
-      <div class="row">
-        <!-- berita utama kedua -->
-        </div>
 
-    </div>
-    <div class="col-4">
-      <!-- anggap ini sidebar -->
-      </div>
-  </div>
   <div class="row">
-    <!-- untuk channel youtube -->
+    <div class="col-7 text-center">
+      <h2>Berita Utama</h2>
+      <div class="row">
+      {% for item in blog|slice:"3:4"%}
+        <div class="main-news">
+          <img height="80%" width="80%"src="{{item.gambar}}" />
+          <br />
+          <h5>{{item.judul}}</h5>
+          <p class="read-more"> {{item.isi|safe|truncatewords:"20"|linebreaks}}<a href="{% url 'blog_detail' item.id %}" >selengkapnya..</a></p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="col-5">
+      <!-- anggap ini sidebar -->
+      <div class="container">
+        <div class="row">
+          {%for item in masukan|slice:":3"%}
+            <div class="row">
+              {{item.nama_lengkap}}<br>
+              {{item.judul}}<br>
+              {{item.isi_pesan}}
+            </div>
+          {%endfor%}
+       </div>
+
+      </div>
+    </div>
   </div>
+  <div class="row justify-content-center">
+    <!-- untuk channel youtube -->
+    <div class="container">
+    <div class="col-12">
+      <div class="row justify-content-center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL5Rb3KzLrXztoCKUvx6ASvjkpaPVo5etx"
+        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <br>
+
+      </div>
+    </div>
+    </div>
+  </div>
+  <br>
 
 </div>
 {%endblock%}

@@ -1,0 +1,38 @@
+{%extends 'base/base.html'%}
+{%block content%}
+<div class="container">
+    <div class="Judul-blok col-3">
+        <span>Alamat Redaksi</span>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-6">
+            <h4><b>The Jokowi Center/thejokowicenter.co.id</b></h4>
+            <h4>The City Tower Lt. 18</h4>
+            <br>
+            <br>
+            <h4>Jalan MH. Thamrin No. 81 Jakarta 10310</h4>
+            <br>
+            <br>
+            <h4>Mobile : +62 812126259999</h4>
+            <h4>Email : <span> neta@integritas.info </span></h4>
+        </div>
+        <div class="col-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d7932.9665268356885!2d106.824307!3d-6.199796!3m2!1i1024!2i768!4f13.1!2m1!1sThe+City+Tower+Dukuh+Atas%2C+Menteng+Kec.+Menteng+Kota+Jakarta+Pusat%2C+Daerah+Khusus+Ibukota+Jakarta!5e0!3m2!1sen!2sid!4v1564042698474!5m2!1sen!2sid" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div> 
+    <div class="Judul-blok col-3">
+        <span>Kirim Pesan/Saran</span>
+    </div>
+    <div class="container input-form text-center">
+        <form method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit">Send</button>
+            <br>
+            <br>
+        </form>
+    </div>
+    <br>
+</div>    
+{%endblock%}
