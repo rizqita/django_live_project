@@ -55,8 +55,9 @@ h3{
   font-family: 'Muli', sans-serif;
   color: #19345E;
 }
+
 /* index.html */
 p.judul-blog{
-  width:365px;
+  width:356px;
   word-wrap: break-word;
 }

@@ -1,3 +1,4 @@
+
 from django.shortcuts import render,redirect
 from .models import Masukan, Blog
 from .forms import Inputfeedback 
@@ -18,6 +19,7 @@ def listmasukan(request):
 def masukan_view(request):
     masukan = list_masukan.all()
     return render(request,'index.html',{'masukan':masukan})   
+
 def jkw_center_main(request):
     blog = Blog.objects.all()
     return render(request,'index.html',{'blog':blog})
