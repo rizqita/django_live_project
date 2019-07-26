@@ -1,4 +1,5 @@
-from django.shortcuts import render
+
+from django.shortcuts import render,redirect
 from .models import Masukan, Blog
 from .forms import Inputfeedback 
 
@@ -9,13 +10,16 @@ def listmasukan(request):
     if request.method == 'POST':
         form = Inputfeedback(request.POST)
         if form.is_valid():
-            post =form.save(commit=False)
+            post=form.save(commit=False)
             post.save()
-            return redirect ('halaman_feedback')
+            return redirect('/')
     else:
         form = Inputfeedback()
-    return render(request, 'Hubungikami.html',{'form':form})
-    
+    return render(request,'Hubungikami.html',{'form':form})
+def masukan_view(request):
+    masukan = list_masukan.all()
+    return render(request,'index.html',{'masukan':masukan})   
+
 def jkw_center_main(request):
     blog = Blog.objects.all()
     return render(request,'index.html',{'blog':blog})
