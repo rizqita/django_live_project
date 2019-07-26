@@ -1,3 +1,4 @@
+/* Base.html */
 .menu li{
     display: table-cell;
     padding-right: 30px;
@@ -10,11 +11,6 @@
 .menu {
   background-color: red;
 }
-p.judul-blog{
-  width:356px;
-  word-wrap: break-word;
-}
-
 .image-footer img{
   width=75%;
 }
@@ -32,20 +28,35 @@ p.judul-blog{
   text-align:center;
 }
 .text-footer{
-  text-align: center;
   color: white;
+}
+.text-footer a{
+  color: red
 }
 .image-header{
   align-items: center;
 }
-.aligncenter{
-  text-align: center;
+/* Hubungikami.html */
+span{
+  color: red
 }
+.Judul-blok {
+  background-color:black;
+}
+/* social media.html */
+/* .aligncenter{
+  text-align: center;
+} */
 h3{
-  padding-top: 25px;
-    padding-left: 100px;
-    font-size: 23px;
-    text-align: center;
-    font-family: 'Muli', sans-serif;
-    color: #19345E;
+  /* padding-top: 25px;
+  padding-left: 100px;
+  font-size: 23px;
+  text-align: center; */
+  font-family: 'Muli', sans-serif;
+  color: #19345E;
+}
+/* index.html */
+p.judul-blog{
+  width:365px;
+  word-wrap: break-word;
 }
