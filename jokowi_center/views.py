@@ -12,9 +12,9 @@ def listmasukan(request):
     if request.method == 'POST':
         form = Inputfeedback(request.POST)
         if form.is_valid():
-            post =form.save(commit=False)
+            post=form.save(commit=False)
             post.save()
-            return redirect ('halaman_feedback')
+            return redirect('/')
     else:
         form = Inputfeedback()
     return render(request, 'Hubungikami.html',{'form':form})
